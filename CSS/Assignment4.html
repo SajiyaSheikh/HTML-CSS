@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <style>
+        #top-heading{
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        .container{
+            height: 400px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+        
+        .box1{
+            height: 100%;
+            width: 20%;
+            margin-right: 10px;
+        }
+
+        .box2{
+            height: 100%;
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        .box3{
+            height: 100%;
+            width: 40%;
+            margin-right: 10px;
+        }
+
+        .box1 > div{
+            height: 13%;
+            width: 100%;
+            margin-bottom: 4px;
+            display: flex;
+        }
+
+        .box1 > div >div{
+            height: 100%;
+            width: 32%;
+            border: 1px solid rgb(38, 37, 37);
+            border-radius: 4px;
+            margin-right: 2px;
+        }
+
+        .box1-c1 >div:first-child{
+            background-color: #45474f;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+
+        }
+
+        .box1-c1 > div:nth-child(n + 2) {
+            border: none;
+        }
+
+        .box1-c1~div>div:first-child{
+            background-color: #335b7d;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+
+        }
+
+        .box1-c1~div>div:nth-child(2){
+            background-color: #622e3a;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+
+        }
+        .box1-c2>div:last-child, .box1-c3>div:last-child{
+            border: none;
+        }
+
+        .box1-c4>div:last-child, .box1-c5>div:last-child{
+            background-color: #3b4063;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+
+        .box1-c6>div:last-child{
+            background-color: #034877;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+
+        .box1-c7>div:last-child{
+            background-color:#622e3a ;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+
+        .box2 > div{
+            height: 13%;
+            width: 100%;
+            margin-bottom: 4px;
+            display: flex;
+            
+        }
+
+          .box2 > div >div{
+            height: 100%;
+            width: 11%;
+            border: 1px solid rgb(38, 37, 37);
+            border-radius: 4px;
+            margin-right: 2px;
+          }
+
+          .box2-c1>div, .box2-c2>div, .box2-c3>div{
+            display: none;
+
+          }
+
+          .box2-c1, .box2-c2, .box2-c3{
+            border: none;
+          }
+
+          .box2-c4 div, .box2-c5 div, .box2-c6 div, .box2-c7>div{
+            background-color: #3b4063;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+          }
+
+          .box3 > div{
+            height: 13%;
+            width: 100%;
+            margin-bottom: 4px;
+            display: flex;
+           
+        }
+
+        .box3 > div >div{
+            height: 100%;
+            width: 18%;
+            border: 1px solid rgb(38, 37, 37);
+            border-radius: 4px;
+            margin-right: 2px;
+          }
+
+          .box3>div>div:last-child{
+            background-color: #622e3a;
+    
+          }
+
+         .box3-c2~div>div:first-child{
+            background-color: #2c4d46;
+         }
+
+         .box3-c2>div:first-child{
+            background-color: #684a1b;
+         }
+
+         .box3-c2>div[id="2"],.box3-c2>div[id="3"],.box3-c2>div[id="4"],.box3-c2>div[id="5"]{
+            background-color: #45586c;
+         }
+
+         .box3-c3>div[id="2"]
+         {
+            background-color: #523d1a;
+         }
+
+         .box3-c3>div[id="3"],.box3-c3>div[id="4"],.box3-c3>div[id="5"]{
+            background-color: #45586c;
+         }
+
+         .box3-c4>div[id="2"],.box3-c4>div[id="3"]{
+            background-color: #523d1a;
+         }
+
+         .box3-c4>div[id="4"],.box3-c4>div[id="5"]{
+            background-color: #45586c;
+         }
+
+         .box3-c5>div[id="2"]
+         {
+            background-color: #2c4d46;
+
+         }
+
+         .box3-c5>div[id="3"],.box3-c5>div[id="4"]{
+            background-color: #523d1a;
+         }
+
+         .box3-c5>div[id="5"]{
+            background-color: #45586c;
+         }
+         
+         .box3-c6>div[id="2"],.box3-c6>div[id="3"],.box3-c6>div[id="4"],.box3-c6>div[id="5"]{
+            background-color: #2c4d46;
+         }
+
+         .box3-c7>div[id="2"],.box3-c7>div[id="3"],.box3-c7>div[id="4"],.box3-c7>div[id="5"]{
+            background-color: #47464e;
+         }
+         .box3-c7>div:first-child{
+            background-color: #47464e;
+         }
+
+         .box3>div>div{
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+            box-sizing: border-box;
+            
+         }
+
+         .box3-c1>div[id="1"],.box3-c1>div[id="2"],.box3-c1>div[id="3"],.box3-c1>div[id="4"],.box3-c1>div[id="5"]{
+            border: none;
+         }
+    </style>
+</head>
+<body>
+    <h2 id="top-heading">The Periodic Table Of Elements</h2>
+
+    <div class="container">
+        <div class="box1">
+
+            <div class="box1-c1">
+                <div>H</div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="box1-c2">
+                <div>Li</div>
+                <div>Be</div>
+                <div></div>
+            </div>
+
+            <div class="box1-c3">
+                <div>Na</div>
+                <div>Mg</div>
+                <div></div>
+            </div>
+
+            <div class="box1-c4">
+                <div>K</div>
+                <div>Cs</div>
+                <div>Sc</div>
+            </div>
+
+            <div class="box1-c5">
+                <div>Rb</div>
+                <div>Sr</div>
+                <div>Y</div>
+            </div>
+
+            <div class="box1-c6">
+                <div>Cs</div>
+                <div>Ba</div>
+                <div>La</div>
+            </div>
+
+            <div class="box1-c7">
+                <div>Fr</div>
+                <div>Ra</div>
+                <div>Ac</div>
+            </div>
+
+        </div>
+
+        <div class="box2">
+
+            <div class="box2-c1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="box2-c2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="box2-c3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="box2-c4">
+                <div>Ti</div>
+                <div>V</div>
+                <div>Cr</div>
+                <div>Mn</div>
+                <div>Fe</div>
+                <div>Co</div>
+                <div>Ni</div>
+                <div>Cu</div>
+                <div>Zn</div>
+            </div>
+
+            <div class="box2-c5">
+                <div>Zr</div>
+                <div>Nb</div>
+                <div>Mo</div>
+                <div>Tc</div>
+                <div>Ru</div>
+                <div>Rh</div>
+                <div>Pd</div>
+                <div>Ag</div>
+                <div>Cd</div>
+            </div>
+
+            <div class="box2-c6">
+                <div>Hf</div>
+                <div>Ta</div>
+                <div>W</div>
+                <div>Re</div>
+                <div>Os</div>
+                <div>Ir</div>
+                <div>Pt</div>
+                <div>Au</div>
+                <div>Hg</div>
+            </div>
+
+            <div class="box2-c7">
+                <div>Rf</div>
+                <div>Db</div>
+                <div>Sg</div>
+                <div>Bh</div>
+                <div>Hs</div>
+                <div>Mt</div>
+                <div>Ds</div>
+                <div>Rg</div>
+                <div>Cn</div>
+            </div>
+
+        </div>
+        <div class="box3">
+
+            <div class="box3-c1">
+                <div id="1"></div>
+                <div id="2"></div>
+                <div id="3"></div>
+                <div id="4"></div>
+                <div id="5"></div>
+               <div>He</div>
+            </div>
+
+            <div class="box3-c2">
+                <div id="1">B</div>
+                <div id="2">C</div>
+                <div id="3">N</div>
+                <div id="4">O</div>
+                <div id="5">F</div>
+               <div>Ne</div>
+            </div>
+
+            <div class="box3-c3">
+               <div id="1">Al</div>
+               <div id="2">Si</div>
+               <div id="3">P</div>
+               <div id="4">S</div>
+               <div id="5">Cl</div>
+               <div>Ar</div>
+            </div>
+
+            <div class="box3-c4">
+                <div id="1">Ga</div>
+                <div id="2">Ge</div>
+                <div id="3">As</div>
+                <div id="4">Se</div>
+                <div id="5">Br</div>
+               <div>Kr</div>
+            </div>
+
+            <div class="box3-c5">
+                <div id="1">In</div>
+                <div id="2">Sn</div>
+                <div id="3">Sb</div>
+                <div id="4">Te</div>
+                <div id="5">I</div>
+               <div>Xe</div>
+            </div>
+
+            <div class="box3-c6">
+                <div id="1">Tl</div>
+                <div id="2">Pb</div>
+                <div id="3">Bi</div>
+                <div id="4">Po</div>
+                <div id="5">At</div>
+               <div>Rn</div>
+            </div>
+
+            <div class="box3-c7">
+                <div id="1">Nh</div>
+                <div id="2">Fl</div>
+                <div id="3">Mc</div>
+                <div id="4">Lv</div>
+                <div id="5">Ts</div>
+               <div>Og</div>
+            </div>
+
+    </div>
+</body>
+</html>
