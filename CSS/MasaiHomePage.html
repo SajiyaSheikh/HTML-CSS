@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script 
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous">
+  </script>
+    <style>
+        body {
+            margin: 5px 0px ;
+        }
+        #container{
+            width: 100%;
+            height: 60px;
+            border:none;
+            border-bottom:0.2px solid rgb(222, 218, 218);
+            display: flex;
+            justify-content: space-between; 
+            
+        }
+
+        #outer-box1{
+            width: 18%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #outer-box1>div{
+            margin-top: 10px;
+        }
+        #outer-box2{
+            width: 50%;
+            height: 100%;
+
+        }
+
+
+        img{
+            width: 90px;
+            height: 30px;
+             padding-top: 8px; 
+            
+        }
+        #outer-box1>div:last-child{
+            display: flex;
+            justify-content: space-around;
+            width: 110px;
+            height: 50%;
+            /* padding: 2px 15px; */
+            box-sizing: border-box;
+            background-color: #d6e2fa;
+            /* margin-top: 20px; */
+            margin: auto;
+            border-radius: 5px;
+
+        }
+ 
+        p{
+            font-size: 15px;
+            margin-top: 8px;
+        }
+        #outer-box2{
+            display:flex;
+            justify-content: space-between;
+        }
+
+        #outer-box2>div{
+            
+            width: auto;
+            padding:20px;
+            font-size: small;
+        }
+        button{
+            background-color: rgb(231, 52, 52);
+            padding:  0px 10px; 
+            color: white;
+            border-radius: 8px;
+            border: none;
+            height: 30px;
+            margin: auto;
+            font-size: 12px;
+           
+        }
+        .icon{
+            font-size: 15px;
+            margin-top: 8px; 
+        }
+        #outer-box2>div:hover{
+            color:rgb(231, 52, 52) ;
+        }
+
+        button:hover{
+            background-color: rgb(167, 26, 26);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="outer-box1">
+            <div>
+                <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp">
+            </div>
+            <div>
+                <p>COURSES</p>
+                <i class="fa-solid fa-angle-down icon"></i>
+            </div>
+        </div>
+
+        <div id="outer-box2">
+            <div class="item">INTERVIEW GUIDES</div>
+            <div class="item">SUCCESS STORY</div>
+            <div class="item">HIRE FROM US</div>
+            <div class="item">FEES</div>
+            
+                <button>REGISTER</button>
+        
+  
+        </div>
+        
+    </div>
+</body>
+</html>
